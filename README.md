@@ -1,6 +1,6 @@
 # JVC D-ILA Control
 
-With this plugin you control JVC D-ILA projectors over TCP by using the "JVC External Control Command Communication Specification" and transfer gammatables generated with jvcprojectortools.
+With this plugin you can control JVC D-ILA projectors over TCP by using the "JVC External Control Command Communication Specification" and transfer gammatables generated with jvcprojectortools.
 
 ## Notes
 I use the plugin to control my JVC DLA- X5000 and transfer raw gammatables generated with jvcprojectortools by arvehj. Many thanks to arvehjs groundwork so i could have a look in the communication procedure!
