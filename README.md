@@ -4,7 +4,7 @@ With this plugin to control JVC D-ILA projectors over TCP by using the "JVC Exte
 
 ## Notes
 I use the plugin to control my JVC DLA- X5000 and transfer raw gammatables generated with jvcprojectortools by arvehj. Many thanks to arvehjs groundwork so i could have a look in the communication procedure!
-You can use all operation commands given in the "JVC External Control Command Communication Specification". Wrong or unknown commands will be ignored by the plugin and the projector. Request commands are not yet supported.
+You can use all operation commands given in the "JVC External Control Command Communication Specification". Wrong or unknown commands will be ignored by the plugin and the projector. Most of the commands won`t be acknowledged when the projector has no input signal. Request commands are not yet supported.
 The gamma table configuration files can be raw gamma table files (loaded from the projector with jvcprojectortools) or the configuration files that are generated with jvcprojectortools when you save your parameters. When using these files only the deposited raw gamma data ("table"- data) is needed and will be transfered.
 
 The plugin should work from the projector generation X3/X7/X9 up to X5900/X7900/X9900 and surely for upcoming generations, too.
