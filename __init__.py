@@ -71,18 +71,20 @@ PMGammaGr = '218901504D44470A'
 PMGammaBl = '218901504D44420A'
 
 
-
 class Error(Exception):
     """Error"""
     pass
+
 
 class Closed(Exception):
     """Connection Closed"""
     pass
 
+
 class Timeout(Exception):
     """Command Timout"""
     pass
+
 
 class CommandNack(Exception):
     """JVC command not acknowledged"""
@@ -180,9 +182,6 @@ class JVC_DILA_Control(SmartPlugin):
                                       .format(self.get_fullname(), item, caller, source, dest))
                 self.check_gamma_cmd(item)
 
-###############################################################################
-#...........................GAMMATABLE HANDLING                               #
-#                              jvcproj_gamma                                  #
 
     def check_gamma_cmd(self, item):
         """check gamma options to import new gammatable"""
@@ -267,13 +266,6 @@ class JVC_DILA_Control(SmartPlugin):
             yield val % 256
             yield int(val / 256)
 
-#                              jvcproj_gamma                                   #
-#...........................GAMMATABLE HANDLING                                #
-################################################################################
-
-################################################################################
-#...........................OPERATION LIST HANDLING                            #
-#                                 jvcproj_cmd                                  #
 
     def check_cmd(self, item):
         """create command list and execute low level string validation for each command"""
@@ -312,12 +304,7 @@ class JVC_DILA_Control(SmartPlugin):
                 self.set(cmd)
                 self.logger.debug("Plugin '{}': operation command '{}' sent successfully!"
                                   .format(self.get_fullname(), cmd))
-
         self.disconnect('finished! Now disconnecting!')
-
-#                                 jvcproj_cmd                                  #
-#...........................OPERATION LIST HANDLING                            #
-################################################################################
 
 
     def connect(self):
@@ -336,7 +323,6 @@ class JVC_DILA_Control(SmartPlugin):
         self.logger.debug("Plugin '{}': handshake with host: '{}' completed."
                           .format(self.get_fullname(), self.host_port))
 
-
     def set(self, cmd):
         try:
             self.send(binascii.a2b_hex(cmd))
@@ -347,7 +333,6 @@ class JVC_DILA_Control(SmartPlugin):
 
     def get(self):
         pass
-
 
     def disconnect(self, message ='disconnecting...'):
         """Close socket"""
