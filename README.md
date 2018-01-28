@@ -33,11 +33,11 @@ jvcproj:
 The plugin uses the raw hex operation commands. A list of all commands (depending on the projectors series) can be found by looking at the JVC support homepage or by searching for JVC projector RS-232 command lists.
 Here is a small example for an operation command "Power On" (21 89 01 50 57 31 0A):
 
-`21`: Header - an operation command always start with 21 (ASCII: "!")
-`89 01`: Unit ID - is fixed at 89 01 for all models
-`50 57`: Command - varies depending on the command. In this example 50 57 (ASCII: "PW")
-`30`: Data - This is the value to apply to the command. Using the Power example above, the data value for On is 31 (ASCII: "1"). Length varies depending on command (not always 1 byte)!
-`0A`: End - This signifies the end of the command and is fixed at 0A for all models.
+  * `21`: Header - an operation command always start with 21 (ASCII: "!")
+  * `89 01`: Unit ID - is fixed at 89 01 for all models
+  * `50 57`: Command - varies depending on the command. In this example 50 57 (ASCII: "PW")
+  * `30`: Data - This is the value to apply to the command. Using the Power example above, the data value for On is 31 (ASCII: "1"). Length varies depending on command (not always 1 byte)!
+  * `0A`: End - This signifies the end of the command and is fixed at 0A for all models.
 
 ### Example:
 
@@ -238,7 +238,7 @@ Two examples, both will load the gamma data from file to gamma slot custom 3
         enforce_updates: 'True'
 ```
 
-###logging
+### logging
 Debug logging informationen for this plugin can be activated in the logging.yaml
 ```yaml
 loggers:
