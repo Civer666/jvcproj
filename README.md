@@ -9,6 +9,8 @@ The gamma table configuration files can be raw gamma table files (loaded from th
 
 The plugin should work from the projector generation X3/X7/X9 up to X5900/X7900/X9900 and surely for upcoming generations, too.
 
+Please use [this thread for support, questions, feedback etc.](https://knx-user-forum.de/forum/supportforen/smarthome-py/1188479-plugin-steuerung-von-jvc-d-ila-projektoren)
+
 ## Configuration
 
 ### plugin.yaml
