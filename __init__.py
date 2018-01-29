@@ -284,7 +284,7 @@ class JVC_DILA_Control(SmartPlugin):
                                       .format(self.get_fullname(), _cmd.upper(), OPE, REQ))
             else:
                 self.logger.debug("Plugin '{}': ERROR! Invalid UNIT-ID or END found in command '{}'! UNIT-ID must be '{}'! END must be '{}' !"
-                                  .format(self.get_fullname(), _cmd.upper(), UNIT-ID, END))
+                                  .format(self.get_fullname(), _cmd.upper(), UNIT_ID, END))
         if _cmdlist ==[]:
             self.logger.debug("Plugin '{}': nothing to send..."
                               .format(self.get_fullname()))
